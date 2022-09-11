@@ -83,6 +83,13 @@
   }
 }
 
+.navbar{
+  i:hover{
+    cursor: pointer;
+    color: $primary;
+  }
+}
+
 .fa-wallet{
   font-size: 24px;
 }
