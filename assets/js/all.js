@@ -41,6 +41,7 @@ $(function () {
   }
 
   $('#search-icon').click(function () {
+    if ($(window).width() > 974) return;
     isSearch = !isSearch;
     $('.search-bar').addClass("d-block");
     $('.navbar-toggler , .logo').addClass('d-none');

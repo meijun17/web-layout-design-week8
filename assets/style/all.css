@@ -19650,6 +19650,11 @@ p {
   }
 }
 
+.navbar i:hover {
+  cursor: pointer;
+  color: #E6553B;
+}
+
 .fa-wallet {
   font-size: 24px;
 }
