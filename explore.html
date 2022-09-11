@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ART NFT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-light py-4 py-lg-0">
+      <div class="container justify-content-between">
+        <h1 class="col-lg-5 logo">
+          <a href="#" class="logo-link">
+            ART NFT
+          </a>
+        </h1>
+        <div class="search-bar ms-xxl-5">
+            <i class="fa-solid fa-angle-left" id="back-icon"></i>
+            <input type="search" class="text-dark fs-7 border-0 bg-light" placeholder="搜尋作品名稱、藝術家名稱">
+        </div>
+        <div class="col-xxl-1 text-center">
+          <i class="fa-solid fa-magnifying-glass fs-5" id="search-icon"></i>
+          <button class="navbar-toggler ms-3" 
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarList" 
+                  aria-controls="navbarList" 
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <i class="fa-solid fa-bars fs-4 navbar-collapse-icon"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarList">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item border-bottom border-bottom-lg-none border-lg-none">
+              <a href="explore.html" class="nav-link fs-5 fw-bold py-6 py-lg-8 px-lg-6 px-xxl-9">探索</a>
+            </li>
+            <li class="nav-item">
+              <a href="price.html" class="nav-link fs-5 fw-bold py-6 py-lg-8 px-lg-6 px-xxl-9">市值</a>
+            </li>
+            <li class="nav-item py-lg-8 ps-lg-6 ps-xxl-9">
+              <a href="#" class="nav-link pt-0 pb-lg-0 px-0"
+                 >
+                 <i class="fa-solid fa-wallet"
+                    data-bs-toggle="modal" data-bs-target="#walletModal"></i>
+                 <button type="button"
+                         class="btn-wallet btn btn-primary fs-5 w-100 py-3"
+                         onclick="openWallet()">
+                    連結錢包
+                 </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content bg-light">
+      
+<section class="container artwork pt-6 pt-lg-8 pb-8 pb-lg-10">
+
+    <ul class="grid-masonry row row-cols-2 row-cols-xl-3 row-cols-xxl-4 gy-lg-9 gy-4 gx-6" data-masonry='{"percentPosition": true }'>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative">
+                <img src="./assets/images/art09.jpg" alt="區塊戀-他的私生活">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">區塊戀-他的私生活</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">區塊戀-他的私生活</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative">
+                <img src="./assets/images/art10.jpg" alt="夏娃的醜聞">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">唯一想擁有的人，唯一不可以擁有的</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">夏娃的醜聞</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative">
+                <img src="./assets/images/art02.jpg" alt="藍色啤酒海">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">唯一想擁有的人，唯一不可以擁有的</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">藍色啤酒海</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art11.jpg" alt="沒有人愛我">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">沒有人愛我</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">沒有人愛我</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art12.jpg" alt="不哭不哭眼淚是珍珠">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">不哭不哭眼淚是珍珠</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">不哭不哭眼淚是珍珠</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art03.jpg" alt="十分鐘就到">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">十分鐘就到</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">十分鐘就到</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art04.jpg" alt="我這樣有美嗎">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">我這樣有美嗎</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">我這樣有美嗎</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art27.jpg" alt="我真的受傷">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">我真的受傷</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">我真的受傷</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art19.jpg" alt="野小孩——叫你不要玩那個">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">野小孩——叫你不要玩那個</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">野小孩——叫你不要玩那個</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art16.jpg" alt="柔美的細胞小將">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">柔美的細胞小將</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">柔美的細胞小將</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art15.jpg" alt="心如止水——今天吃素">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">心如止水——今天吃素</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">心如止水——今天吃素</p>
+        </li>
+        <li class="col grid-masonry-item">
+            <div class="bg-white p-2 p-md-6 position-relative ">
+                <img src="./assets/images/art06.jpg" alt="每當夏天我吹著溫暖的風">
+                <div class="artwork__overlay p-6">
+                    <div class="position-relative h-100 artwork__overlay__content border border-white">
+                        <div class="text-white p-4">
+                            <p class="mb-3 fw-bold">每當夏天我吹著溫暖的風</p>
+                            <p>
+                                <i class="fab fa-ethereum"></i>
+                                <span class="font-Squada">300</span>
+                            </p>
+                            <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-md-bold border-bottom-md py-2 py-md-4">每當夏天我吹著溫暖的風</p>
+        </li>
+    </ul>
+
+</section>
+<div class="border-bottom mb-2"></div>
+<div class="border-bottom border-4"></div>
+    </main>
+
+    <!-- mobile wallet -->
+    <section>
+        <div class="mobile-wallet d-none">
+            <div class="">
+                <div class="border-bottom d-flex align-items-center">
+                    <p class="fs-4 py-4 m-auto">
+                      連結你的錢包
+                    </p>
+                    <i class="fs-4 fa-solid fa-xmark me-3" onclick="closeWallet()"></i>
+                </div>
+                <div class="px-3 py-6">
+                  <ul class="row row-cols-1 g-2">
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option1">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect01.png" alt="MetaMask">
+                        MetaMask
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option2">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect02.png" alt="Coinbase Wallet">
+                        Coinbase Wallet
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option3">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect03.png" alt="MetaMask">
+                        WalletConnect
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option4">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect04.png" alt="MetaMask">
+                        Phantom
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option5">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect05.png" alt="MetaMask">
+                        Glow
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option6">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect06.png" alt="MetaMask">
+                        Fortmatic
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-primary w-100 py-3 fs-5 position-absolute bottom-0" onclick="closeWallet()">連結錢包</button>
+            </div>
+        </div>
+    </section>
+    <!-- mobile wallet -->
+
+
+    <footer class="footer bg-light py-6">
+      <p class="text-center">© ART NFT. All Rights Reserved</p>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="walletModalLabel">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title">連結你的錢包</h5>
+          </div>
+          <div class="modal-body py-6">
+            <ul class="row row-cols-2 g-2">
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option1" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option1">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect01.png" alt="MetaMask">
+                  MetaMask
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option2" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option2">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect02.png" alt="Coinbase Wallet">
+                  Coinbase Wallet
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option3" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option3">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect03.png" alt="MetaMask">
+                  WalletConnect
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option4" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option4">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect04.png" alt="MetaMask">
+                  Phantom
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option5" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option5">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect05.png" alt="MetaMask">
+                  Glow
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option6" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option6">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect06.png" alt="MetaMask">
+                  Fortmatic
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer justify-content-center border-top-0 pt-0 pb-6">
+            <button type="button" class="btn btn-primary fs-5 px-9 py23" data-bs-dismiss="modal">
+              連結錢包
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

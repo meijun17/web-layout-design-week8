@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ART NFT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-light py-4 py-lg-0">
+      <div class="container justify-content-between">
+        <h1 class="col-lg-5 logo">
+          <a href="#" class="logo-link">
+            ART NFT
+          </a>
+        </h1>
+        <div class="search-bar ms-xxl-5">
+            <i class="fa-solid fa-angle-left" id="back-icon"></i>
+            <input type="search" class="text-dark fs-7 border-0 bg-light" placeholder="搜尋作品名稱、藝術家名稱">
+        </div>
+        <div class="col-xxl-1 text-center">
+          <i class="fa-solid fa-magnifying-glass fs-5" id="search-icon"></i>
+          <button class="navbar-toggler ms-3" 
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarList" 
+                  aria-controls="navbarList" 
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <i class="fa-solid fa-bars fs-4 navbar-collapse-icon"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarList">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item border-bottom border-bottom-lg-none border-lg-none">
+              <a href="explore.html" class="nav-link fs-5 fw-bold py-6 py-lg-8 px-lg-6 px-xxl-9">探索</a>
+            </li>
+            <li class="nav-item">
+              <a href="price.html" class="nav-link fs-5 fw-bold py-6 py-lg-8 px-lg-6 px-xxl-9">市值</a>
+            </li>
+            <li class="nav-item py-lg-8 ps-lg-6 ps-xxl-9">
+              <a href="#" class="nav-link pt-0 pb-lg-0 px-0"
+                 >
+                 <i class="fa-solid fa-wallet"
+                    data-bs-toggle="modal" data-bs-target="#walletModal"></i>
+                 <button type="button"
+                         class="btn-wallet btn btn-primary fs-5 w-100 py-3"
+                         onclick="openWallet()">
+                    連結錢包
+                 </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content bg-light">
+      
+<section class="container pt-6 pb-8 pt-lg-8 pb-lg-10 price">
+    <div class="mb-7 mb-lg-9">
+        <h2 class="fs-lg-1 fw-bold text-center mb-4 mb-lg-5">市價排行榜</h2>
+        <p class="text-center">NFT系列藝術作品排行榜！全球注目指標</p>
+    </div>
+
+    <div class="d-lg-flex align-items-center mb-4 d-none">
+        <div class="col-lg-6">
+            <div class="d-flex align-items-center justify-content-between">
+                <p class="ms-9">系列作品名稱</p>
+                <p class="text-end">價值</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="col-8">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="col text-end">24h%</p>
+                        <p class="col text-end">7d%</p>
+                        <p class="col text-end">地板價</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="col text-end">擁有者</p>
+                        <p class="col text-end pe-4">作品數量</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="border bg-white">
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">1</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art13.jpg" alt="追求者送我的花">
+                                    <p class="fs-7 fw-bold">追求者送我的花</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                1,774.19
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+220.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-2.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone px-2 num">2</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art06.jpg" alt="夏天的時候">
+                                    <p class="fs-7 fw-bold">夏天的時候</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                1,524.89
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+80.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-2.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            90.23
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">3</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art02.jpg" alt="海洋波度">
+                                    <p class="fs-7 fw-bold">海洋波度</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                1,400.59
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-primary fs-4">-3.92%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-13.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">4</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art03.jpg" alt="賴床真的很不好">
+                                    <p class="fs-7 fw-bold">賴床真的很不好</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                1,224.88
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-primary fs-4">-9.23%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-20.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">5</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art01.jpg" alt="瞳孔:流動的脈絡">
+                                    <p class="fs-7 fw-bold">瞳孔:流動的脈絡</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                1,021.09
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+83.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-1.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">6</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art12.jpg" alt="哭泣的時候">
+                                    <p class="fs-7 fw-bold">哭泣的時候</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                921.42
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-primary fs-4">-9.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-secondary fs-4">+183.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">7</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art14.jpg" alt="破碎的菠蘿麵包">
+                                    <p class="fs-7 fw-bold">破碎的菠蘿麵包</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                888.88
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+20.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-0.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">8</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art08.jpg" alt="人生中的貓咪們">
+                                    <p class="fs-7 fw-bold">人生中的貓咪們</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                770.23
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+32.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-secondary fs-4">+30.23</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="border-bottom">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">9</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art28.jpg" alt="髒兮兮的家">
+                                    <p class="fs-7 fw-bold">髒兮兮的家</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                502.31
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+13.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-secondary fs-4">+50.23</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="">
+            <div>
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                    <div class="col-lg-6 price-item">
+                        <div class="d-flex align-items-center justify-content-between position-relative price-btn">  
+                            <div class="d-flex align-items-center"> 
+                                <p class="font-Paytone num">10</p>
+                                <div class="border-start d-flex align-items-center py-4">
+                                    <img class="rounded-circle box-32 me-1 ms-2" src="./assets/images/art16.jpg" alt="細胞小將">
+                                    <p class="fs-7 fw-bold">細胞小將</p>
+                                </div>
+                            </div>
+                            <p class="font-Squada pe-2">
+                                <i class="fa-brands fa-ethereum me-1"></i>
+                                420.20
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 p-4 p-lg-0 border-top border-lg-0 price-detail d-none d-lg-block">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">24h%</p>
+                                        <p class="font-Squada text-secondary fs-4">+54.49%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">7d%</p>
+                                        <p class="font-Squada text-primary fs-4">-12.43%</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">地板價</p>
+                                        <p class="font-Squada">
+                                            <i class="fa-brands fa-ethereum me-1"></i>
+                                            2.90
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="col text-center text-lg-end">
+                                        <p class="fs-7 mb-2 d-lg-none">擁有者</p>
+                                        <p class="font-Squada fs-4">32.1K</p>
+                                    </div>
+                                    <div class="col text-center text-lg-end pe-lg-4">
+                                        <p class="fs-7 mb-2 d-lg-none">作品數量</p>
+                                        <p class="font-Squada fs-4">1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+</section>
+
+<div class="border-bottom mb-2"></div>
+<div class="border-bottom border-4"></div>
+    </main>
+
+    <!-- mobile wallet -->
+    <section>
+        <div class="mobile-wallet d-none">
+            <div class="">
+                <div class="border-bottom d-flex align-items-center">
+                    <p class="fs-4 py-4 m-auto">
+                      連結你的錢包
+                    </p>
+                    <i class="fs-4 fa-solid fa-xmark me-3" onclick="closeWallet()"></i>
+                </div>
+                <div class="px-3 py-6">
+                  <ul class="row row-cols-1 g-2">
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option1">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect01.png" alt="MetaMask">
+                        MetaMask
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option2">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect02.png" alt="Coinbase Wallet">
+                        Coinbase Wallet
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option3">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect03.png" alt="MetaMask">
+                        WalletConnect
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option4">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect04.png" alt="MetaMask">
+                        Phantom
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option5">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect05.png" alt="MetaMask">
+                        Glow
+                      </label>
+                    </li>
+                    <li class="col">
+                      <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                      <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="option6">
+                        <img class="box-24 me-4" src="./assets/images/logo/connect06.png" alt="MetaMask">
+                        Fortmatic
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-primary w-100 py-3 fs-5 position-absolute bottom-0" onclick="closeWallet()">連結錢包</button>
+            </div>
+        </div>
+    </section>
+    <!-- mobile wallet -->
+
+
+    <footer class="footer bg-light py-6">
+      <p class="text-center">© ART NFT. All Rights Reserved</p>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="walletModalLabel">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title">連結你的錢包</h5>
+          </div>
+          <div class="modal-body py-6">
+            <ul class="row row-cols-2 g-2">
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option1" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option1">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect01.png" alt="MetaMask">
+                  MetaMask
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option2" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option2">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect02.png" alt="Coinbase Wallet">
+                  Coinbase Wallet
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option3" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option3">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect03.png" alt="MetaMask">
+                  WalletConnect
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option4" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option4">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect04.png" alt="MetaMask">
+                  Phantom
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option5" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option5">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect05.png" alt="MetaMask">
+                  Glow
+                </label>
+              </li>
+              <li class="col">
+                <input type="radio" class="btn-check" name="options" id="modal-option6" autocomplete="off">
+                <label class="btn border text-start w-100 p-4 font-Squada position-relative" for="modal-option6">
+                  <img class="box-24 me-4" src="./assets/images/logo/connect06.png" alt="MetaMask">
+                  Fortmatic
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer justify-content-center border-top-0 pt-0 pb-6">
+            <button type="button" class="btn btn-primary fs-5 px-9 py23" data-bs-dismiss="modal">
+              連結錢包
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
