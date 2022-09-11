@@ -1,0 +1,15 @@
+.swiper{
+    .swiper-pagination-bullet {
+        border-radius: 0;
+        background:#000;
+        opacity: 1;
+        transition: .3s;
+        &-active {
+            background: $primary;
+            width: 16px;
+        }
+    }
+}
+
+
+

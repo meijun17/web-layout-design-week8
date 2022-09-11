@@ -1,0 +1,53 @@
+@include media-breakpoint-down(lg) { 
+    .price-btn::before{
+        content: "\f067"; // "\f068"; // font-awesome
+        font: var(--fa-font-solid); // font-awesome
+        color: white;
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 10px;
+    }
+
+    .price-btn::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-left: 32px transparent solid;
+        border-bottom: 32px #000 solid;
+        cursor: pointer;
+    }
+
+    .price-btn.show::before{
+        content: "\f068"; // font-awesome
+        font: var(--fa-font-solid); // font-awesome
+        color: white;
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 10px;
+    }
+
+    .price-btn.show::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-left: 32px transparent solid;
+        border-bottom: 32px $primary solid;
+        cursor: pointer;
+    }
+}
+
+.price{
+    .num{
+        width: 38px;
+        text-align: center;
+    }
+}
+

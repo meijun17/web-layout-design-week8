@@ -1,0 +1,28 @@
+body{
+    font-family: "Noto Sans TC", "sans-serif";
+    color: black;
+}
+
+ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+input{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0;
+}

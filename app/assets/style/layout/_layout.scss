@@ -1,0 +1,143 @@
+
+.border-bottom-lg-none{
+  @include media-breakpoint-up(lg) { 
+    border-bottom: none !important;
+  }
+}
+
+.font-Squada{
+  font-family: 'Squada One', cursive;
+  line-height: 1.04;
+}
+
+.font-Paytone{
+  font-family: 'Paytone One', sans-serif;
+  line-height: 1;
+}
+
+
+.logo-link{
+  position: relative;
+  background-size: 85px 18px;
+  background-image: url("../images/logo.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 85px;
+  height: 18px;
+
+  // 圖片取代文字技巧
+  text-indent: 101%; // 設定文字首行縮排
+  overflow: hidden;
+  white-space: nowrap;
+  @include media-breakpoint-up(lg) { 
+    background-size: 190px 40px;
+    width: 190px;
+    height: 40px;
+  }
+}
+
+.navbar::after{
+  content: '';
+  background-color: $black;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  @include media-breakpoint-up(lg) { 
+    top: 106px;
+  }
+}
+
+.search-bar,
+.nav-item{
+  position: relative;
+}
+
+@include media-breakpoint-up(lg) { 
+  .nav-item::before{
+    content: '';
+    background-color: $black;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+  .search-bar{
+    input{
+      width: 288px;
+      height: 107px;
+    }
+    &::before{
+      content: '';
+      background-color: $black;
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -48px;
+    }
+  }
+  .fa-angle-left{
+    display: none;
+  }
+}
+
+.fa-wallet{
+  font-size: 24px;
+}
+
+@include media-breakpoint-up(lg) { 
+  nav{
+    .btn-wallet{
+      display: none;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(lg) { 
+  nav{
+    .btn-wallet{
+      display: inline-block;
+    }
+    .fa-wallet,
+    .search-bar{
+      display: none;
+    }
+  }
+}
+
+.box-24{
+  width: 24px;
+  height: 24px;
+}
+
+.modal input[type="radio"]:checked + label.btn,
+.mobile-wallet input[type="radio"]:checked + label.btn{
+  border: 2px solid $primary !important;
+}
+
+.modal input[type="radio"]:checked + label::after,
+.mobile-wallet input[type="radio"]:checked + label::after{
+  position: absolute;
+  content: "\f00c"; // font-awesome
+  font: var(--fa-font-solid); // font-awesome
+  font-weight: 900;
+  color: #e6553b;
+  right: 16px;
+}
+
+
+// mobile-filter css重複 
+.mobile-wallet{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1500;
+  .fa-xmark{
+      cursor: pointer;
+  }
+  background-color: $white;
+  height: 100%;
+}

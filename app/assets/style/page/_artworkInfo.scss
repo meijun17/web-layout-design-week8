@@ -1,0 +1,15 @@
+.otherSwiper{
+    height: 248px;
+    .item{
+        height: 180px;
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+    .otherSwiper{
+        height: 487px;
+        .item{
+            height: 375px;
+        }
+    }
+}

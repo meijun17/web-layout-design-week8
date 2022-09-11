@@ -1,0 +1,19 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap');
+@import './helpers/base';
+@import './mixin/mixin';
+@import './components/buttons';
+@import './components/swiper';
+@import './helpers/utilities';
+@import "../../../node_modules/bootstrap/scss/utilities/api";
+
+@import './layout/layout.scss';
+@import './page/_index.scss';
+@import './page/_artist.scss';
+@import './page/_artworkSeries';
+@import './page/_artworkInfo';
+@import './page/_price';

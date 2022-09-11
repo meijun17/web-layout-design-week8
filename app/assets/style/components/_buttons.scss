@@ -1,0 +1,37 @@
+.btn-primary{
+    @include button-variant($primary,$black,$white)
+  }
+  
+.btn-black-outline{
+  @include button-variant($white,$black,$black,$primary)
+}
+
+.btn-triangle  {
+    position: relative;
+}
+
+.btn-triangle::after {
+    content:"";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-left: 16px transparent solid;
+    border-bottom: 16px $primary solid;
+}
+
+.btn-triangle:hover,
+.btn-triangle:focus{
+    background-color: $primary;
+    color: white;
+    &::after{
+        border-bottom: 16px $black solid;
+    }
+}
+
+.btn-outline-black{
+    background-color: $white;
+}
+
+.btn-border--hover:hover{
+    border: 1px solid $black;
+}

@@ -1,0 +1,52 @@
+$utilities: map-merge(
+  $utilities, (
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      ( responsive: true ),
+    ),
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      ( responsive: true ),
+    ),
+    "border": map-merge(
+      map-get($utilities, "border"),
+      ( responsive: true ),
+    ),
+    "border-bottom": map-merge(
+        map-get($utilities, "border-bottom"),
+        ( responsive: true ),
+    ),
+    "border-width": map-merge(
+      map-get($utilities, "border-width"),
+      ( 
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "border-width"), "values"),
+          ( 8: 8px,
+            10: 10px,
+            24: 24px),
+        ),
+      ),
+    ),
+  )
+);
+
+.mb-n1{
+    margin-bottom: -1px;
+}
+
+.mr-n1{
+    margin-right: -1px;
+}
+
+@include media-breakpoint-up(lg) { 
+    .fs-lg-1{
+        font-size: 48px !important;
+    }
+}
+
+.writing-rl{
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+

@@ -1,0 +1,69 @@
+.collapse-btn{
+    border: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: white;
+}
+
+.box-32{
+    @include square-box(32px,32px)
+}
+
+.artworkSeries{
+    .border-start{
+        position: relative;
+        &::before{
+            content: "";
+            background-color: white;
+            width: 1px;
+            height: 55px;
+            position: absolute;
+            left: -1px;
+        }
+    }
+    .select-style-none{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        outline: none;
+        padding: 8px 54px 8px 38px;
+    }
+    .select-icon{
+        position: relative;
+        &::after {
+            font: var(--fa-font-solid); // font-awesome
+            content: "\f0dc";           // font-awesome
+            position: absolute;
+            top: 12px;
+            right: 38px;
+            pointer-events: none; //穿透上層，點選到下層select
+        }
+    }
+}
+
+.openFilter-btn{
+    padding: 8px 48px;
+    &:hover{
+        color: white;
+        background-color: $primary;
+    }
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.mobile-filter{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1500;
+    .fa-xmark{
+        cursor: pointer;
+    }
+}

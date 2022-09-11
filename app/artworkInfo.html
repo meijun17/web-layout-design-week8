@@ -1,0 +1,305 @@
+---
+title: ART NFT
+layout: ./app/layout.ejs
+engine: ejs
+current: artworkInfo
+---
+
+<!-- artworkInfo -->
+<section class="artworkInfo container pt-6 pb-8 pt-lg-8">
+    <div class="row row-cols-1 row-cols-lg-2 g-6 mb-6">
+        <div class="col">
+            <img src="./assets/images/art21.jpg" alt="兩情相悅">
+        </div>
+        <div class="col">
+            <div class="border bg-white h-100">
+                <div class="border-bottom p-4">
+                    <a href="artist.html" class="d-flex align-items-center  mb-2">
+                        <img class="rounded-circle box-32" src="./assets/images/artist01.jpg" alt="Michael">
+                        <p class="fw-bold font-Squada text-black ms-4">Michael</p>
+                    </a>
+                    <h2 class="fw-bold mb-4">兩情相悅</h2>
+                    <p class="text-dark fs-7 mb-2">最高出價</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle box-32" src="./assets/images/user01.jpg" alt="user01">
+                            <i class="fa-solid fa-arrow-right d-inline mx-2"></i>
+                            <p class="font-Squada">0.044Eth</p>
+                        </div>
+                        <a href="#" class="btn btn-primary px-9 py-2">出價</a>
+                    </div>
+                </div>
+                <div class="py-5 px-4">
+                    <p class="mb-4">3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                    <p class="mb-4">而且其中一隻竟然有梳油頭，不知道是不是有用定型液，他們感情真好，出門還會特別打扮，看著看著不禁思考，我怎麼會變這樣？</p>
+                    <p>好羨慕啊，我也要有這樣兩情相悅的另一半。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-lg-2 g-6 grid-masonry" data-masonry='{"percentPosition": true }'>
+        <div class="col grid-masonry-item">
+            <div class="border bg-white masonry-content">
+                <button class="collapse-btn border-bottom p-4" 
+                        type="button" 
+                        data-bs-toggle="collapse"       
+                        data-bs-target="#attributes"
+                        aria-expanded="true"
+                        aria-controls="attributes">
+                        屬性
+                    <i class="fa-solid fa-angle-up"></i>
+                </button>
+                <div class="collapse show" id="attributes">
+                    <ul class="py-6 px-4">
+                        <li class="border-bottom border-light">
+                            <div class="d-flex align-items-center justify-content-between pb-2">
+                                <p class="">品種</p>
+                                <p class=" text-dark">青藍金剛鸚鵡</p>
+                            </div>
+                        </li>
+                        <li class="border-bottom border-light">
+                            <div class="d-flex align-items-center justify-content-between py-2">
+                                <p class="">鳥的數量</p>
+                                <p class=" text-dark">2隻</p>
+                            </div>
+                        </li>
+                        <li class="border-bottom border-light">
+                            <div class="d-flex align-items-center justify-content-between py-2">
+                                <p class="">是否有花草</p>
+                                <p class=" text-dark">是</p>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <p class="">鳥的顏色</p>
+                                <p class=" text-dark">藍色</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col grid-masonry-item">
+            <div class="border bg-white masonry-content">
+                <button class="collapse-btn border-bottom p-4" 
+                        type="button" 
+                        data-bs-toggle="collapse"       
+                        data-bs-target="#bid"
+                        aria-expanded="true"
+                        aria-controls="bid">
+                        出價
+                    <i class="fa-solid fa-angle-up"></i>
+                </button>
+                <div class="collapse show" id="bid">
+                    <div class="py-6 px-4">
+                        <table class="table table-hover border-light mb-0">
+                            <tr class="bg-light text-center">
+                                <td scope="col">價格</td>
+                                <td scope="col">期限</td>
+                            </tr>
+                            <tr class="text-center">
+                              <td>
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle box-32" src="./assets/images/artist03.jpg" alt="artist03">
+                                    <i class="fa-solid fa-arrow-right d-inline mx-2"></i>
+                                    <p class="font-Squada">0.044Eth</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="text-dark">3個月後</p>
+                              </td>
+                            </tr>
+                            <tr class="text-center border-white">
+                              <td>
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle box-32" src="./assets/images/user02.jpg" alt="user02">
+                                    <i class="fa-solid fa-arrow-right d-inline mx-2"></i>
+                                    <p class="font-Squada">0.054Eth</p>
+                                </div>
+                              </td>
+                              <td>
+                                <p class="text-dark">1個月後</p>
+                              </td> 
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col grid-masonry-item">
+            <div class="border bg-white masonry-content">
+                <button class="collapse-btn border-bottom p-4" 
+                        type="button" 
+                        data-bs-toggle="collapse"       
+                        data-bs-target="#basicInfo"
+                        aria-expanded="true"
+                        aria-controls="basicInfo">
+                        基本資訊
+                    <i class="fa-solid fa-angle-up"></i>
+                </button>
+                <div class="collapse show" id="basicInfo">
+                    <ul class="py-6 px-4">
+                        <li class="border-bottom border-light">
+                            <div class="d-flex align-items-center justify-content-between pb-2">
+                                <p class="">擁有者</p>
+                                <p class=" text-dark">0xa543x…1283</p>
+                            </div>
+                        </li>
+                        <li class="border-bottom border-light">
+                            <div class="d-flex align-items-center justify-content-between py-2">
+                                <p class="">代幣ID</p>
+                                <p class=" text-dark">#1234</p>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="d-flex align-items-center justify-content-between pt-2">
+                                <p class="">合約地址</p>
+                                <p class=" text-dark">青藍金剛鸚鵡</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col grid-masonry-item">
+            <div class="border bg-white masonry-content">
+                <button class="collapse-btn border-bottom p-4" 
+                        type="button" 
+                        data-bs-toggle="collapse"       
+                        data-bs-target="#transactionHistory"
+                        aria-expanded="true"
+                        aria-controls="transactionHistory">
+                        交易歷史
+                    <i class="fa-solid fa-angle-up"></i>
+                </button>
+                <div class="collapse show" id="transactionHistory">
+                    <div class="py-6 px-4">
+                        <table class="table table-hover border-light mb-0">
+                            <tr class="bg-light text-center">
+                                <td scope="col">事件</td>
+                                <td scope="col">價格</td>
+                                <td scope="col">從</td>
+                                <td scope="col" class="text-start">時間</td>
+                            </tr>
+                            <tr class="text-center">
+                              <td>上架</td>
+                              <td>2nb</td>
+                              <td>
+                                <img class="rounded-circle box-32" src="./assets/images/artist02.jpg" alt="artist02">
+                              </td>
+                              <td class="text-start text-dark">14小時前</td>
+                            </tr>
+                            <tr class="text-center border-white">
+                              <td>出價</td>
+                              <td>2nb</td>
+                              <td>
+                                <img class="rounded-circle box-32" src="./assets/images/artist01.jpg" alt="artist01">
+                              </td>
+                              <td class="text-start text-dark">2週後</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- other -->
+<section class="other container pb-7 pb-lg-8">
+    <div class="d-flex align-items-end justify-content-between border-bottom mb-6 mb-lg-9">
+        <h2 class="d-flex align-items-baseline pb-2 pb-md-4">
+            <span class="font-Squada fs-1 me-4 fw-bold">Other</span>
+            <span class="d-none d-md-block fs-4">其餘作品</span>
+        </h2>
+        <a href="#" class="btn btn-triangle font-Squada fs-5 py-2 px-9 btn-border--hover mb-n1 mr-n1">
+            MORE
+        </a>
+    </div>
+    <div class="artwork swiper otherSwiper">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <div class="bg-white p-2 p-md-6 position-relative item">
+                    <img src="./assets/images/art22.jpg" alt="群聚的小鳥們">
+                    <div class="artwork__overlay p-6">
+                        <div class="position-relative h-100 artwork__overlay__content border border-white">
+                            <div class="text-white p-4">
+                                <p class="mb-3 fw-bold">群聚的小鳥們</p>
+                                <p>
+                                    <i class="fab fa-ethereum"></i>
+                                    <span class="font-Squada">300</span>
+                                </p>
+                                <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                    MORE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="fw-md-bold border-bottom-md py-2 py-md-4">群聚的小鳥們</p>
+            </li>
+            <li class="swiper-slide">
+                <div class="bg-white p-2 p-md-6 position-relative item">
+                    <img src="./assets/images/art27.jpg" alt="我真的受傷了">
+                    <div class="artwork__overlay p-6">
+                        <div class="position-relative h-100 artwork__overlay__content border border-white">
+                            <div class="text-white p-4">
+                                <p class="mb-3 fw-bold">我真的受傷了</p>
+                                <p>
+                                    <i class="fab fa-ethereum"></i>
+                                    <span class="font-Squada">300</span>
+                                </p>
+                                <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                    MORE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="fw-md-bold border-bottom-md py-2 py-md-4">我真的受傷了</p>
+            </li>
+            <li class="swiper-slide">
+                <div class="bg-white p-2 p-md-6 position-relative item">
+                    <img src="./assets/images/art20.jpg" alt="這兩隻也太像企鵝了吧">
+                    <div class="artwork__overlay p-6">
+                        <div class="position-relative h-100 artwork__overlay__content border border-white">
+                            <div class="text-white p-4">
+                                <p class="mb-3 fw-bold">這兩隻也太像企鵝了吧</p>
+                                <p>
+                                    <i class="fab fa-ethereum"></i>
+                                    <span class="font-Squada">300</span>
+                                </p>
+                                <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                    MORE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="fw-md-bold border-bottom-md py-2 py-md-4">這兩隻也太像企鵝了吧</p>
+            </li>
+            <li class="swiper-slide">
+                <div class="bg-white p-2 p-md-6 position-relative item">
+                    <img src="./assets/images/art23.jpg" alt="群聚囉～小鳥">
+                    <div class="artwork__overlay p-6">
+                        <div class="position-relative h-100 artwork__overlay__content border border-white">
+                            <div class="text-white p-4">
+                                <p class="mb-3 fw-bold">群聚囉～小鳥</p>
+                                <p>
+                                    <i class="fab fa-ethereum"></i>
+                                    <span class="font-Squada">300</span>
+                                </p>
+                                <a href="#" class="btn btn-triangle btn-outline-black font-Squada fs-5 py-2 px-9">
+                                    MORE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="fw-md-bold border-bottom-md py-2 py-md-4">群聚囉～小鳥</p>
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<div class="border-bottom mb-2 mt-lg-7"></div>
+<div class="border-bottom border-4"></div>
